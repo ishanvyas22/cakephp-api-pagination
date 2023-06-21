@@ -7,12 +7,12 @@ class ArticlesFixture extends TestFixture
 {
     public $table = 'bryancrowe_articles';
 
-    public $fields = [
-        'id' => ['type' => 'integer'],
-        'title' => ['type' => 'string', 'null' => false],
-        'body' => 'text',
-        '_constraints' => ['primary' => ['type' => 'primary', 'columns' => ['id']]],
-    ];
+    // public $fields = [
+    //     'id' => ['type' => 'integer'],
+    //     'title' => ['type' => 'string', 'null' => false],
+    //     'body' => 'text',
+    //     '_constraints' => ['primary' => ['type' => 'primary', 'columns' => ['id']]],
+    // ];
 
     public $records = [
         ['title' => 'Post #1', 'body' => 'This is the article body.'],
