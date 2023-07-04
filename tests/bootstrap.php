@@ -18,4 +18,4 @@ if (file_exists($root . '/config/bootstrap.php')) {
 }
 require $root . '/vendor/cakephp/cakephp/tests/bootstrap.php';
 
-(new \Cake\TestSuite\Fixture\SchemaLoader())->loadSqlFiles(dirname(__DIR__) . '/config/schema/articles.sql', 'test');
+(new \Cake\TestSuite\Fixture\SchemaLoader())->loadSqlFiles(dirname(__DIR__) . '/tests/Schema/articles.sql', 'test');
