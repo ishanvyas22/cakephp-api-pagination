@@ -72,7 +72,10 @@ jobs:
 
     - name: Run PHPUnit testsuite
       run: |
-        if [[ ${{ matrix.db-type }} == 'mysql' ]]; then export DB_URL='mysql://root:root@127.0.0.1/cakephp'; fi
+        if [[ ${{ matrix.db-type }} == 'mysql' ]]; then
+          export DB_URL='mysql://root:root@127.0.0.1/cakephp';
+          mysql -h 127.0.0.1 -u root -proot cakephp < ./tests/Schema/articles.sql
+        fi
         vendor/bin/phpunit --stderr;
 
   ##############
